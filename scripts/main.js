@@ -1,18 +1,8 @@
-let monBouton = document.querySelector('button');
-let monTitre = document.querySelector ('h1');
+function popup() {
+    let link = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+	if (confirm("Hey toi, tu veux voir des filles chaudes de ta région? c'est la que ça se passe: xxxvidsxxx ")){
+		open(link);
+	};
+};
 
-function définirNomUtilisateur() {
-	let monNom = prompt('Veuillez saisir votre nom.');
-	localStorage.setItem('nom', monNom);
-	monTitre.textcontent = 'Mozilla est cool, ' + monNom;
-}
-if (!localStorage.getItem('nom')) {
-	définirNomUtilisateur();
-} else {
-	let nomEnregistré = localStorage.getItem('nom');
-	monTitre.textcontent = 'Mozilla est cool, ' + nomEnregistré;
-}
-
-monBouton.addEventListener('click', function() {
-	définirNomUtilisateur();
-});
+setTimeout(popup, 3000);
